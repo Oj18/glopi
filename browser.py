@@ -4,30 +4,28 @@ import sys
 import os
 from subprocess import call
 
-url = sys.argv[1]
-path = sys.argv[2]
+def saveurl(url, path):
+    print("args: " + str(sys.argv))
 
-print("args: " + str(sys.argv))
+    call(["firefox", url])
 
-call(["firefox", url])
+    time.sleep(3) # wait for it to load
 
-time.sleep(3) # wait for it to load
+    pyautogui.hotkey('ctrl', 's') # save
 
-pyautogui.hotkey('ctrl', 's') # save
+    time.sleep(1)
 
-time.sleep(1)
+    pyautogui.hotkey('ctrl', 'a') # get text in save path
+    pyautogui.hotkey('backspace')
 
-pyautogui.hotkey('ctrl', 'a') # get text in save path
-pyautogui.hotkey('backspace')
+    pyautogui.typewrite(path)
 
-pyautogui.typewrite(path)
+    pyautogui.hotkey('enter')
 
-pyautogui.hotkey('enter')
+    time.sleep(1)
 
-time.sleep(1)
+    pyautogui.hotkey('enter') # incase you have to overwrite
 
-pyautogui.hotkey('enter') # incase you have to overwrite
+    time.sleep(3)
 
-time.sleep(3)
-
-pyautogui.hotkey("ctrl", "w") # close tab
+    pyautogui.hotkey("ctrl", "w") # close tab
