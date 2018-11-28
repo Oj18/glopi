@@ -39,32 +39,35 @@ The long seemingly random string, in this case, 5bfdbb08d6e667001a7969a4, is the
 # Commands / Usage
 Things in <> mean that you should use your own value, like <BOARD_ID> you should put your own board ID there. Things in square brackets are optional.
 
-## Changelog
-The changelog commands makes a changelog-like output. It is like this:
+## plain-changelog
+The plain-changelog command makes a changelog-like output, **in plain test** It is like this:
 ```
 <left-most column>:
-<the cards here>
+<the cards here, in order from top to bottom>
 
 <one to the right>:
-<the cards for that column here>
+<the cards for that column here as well>
 
 etc.
 ```
 It goes from the left to the right. Usage:
 ```
-./glopi.sh changelog <BOARD_ID> [<FILE_NAME>]
+python3 glopi.py plain-changelog <BOARD_ID> [<FILE_NAME>]
 ```
 If you don't put a file name after then it will print out the output in the terminal, if you do put a file name it will save the output there and not print anything in the terminal.
 
+## fancy-changelog
+The fancy-changelog command is like the plain-changelog command but **adds some markdown**. It has the exact same usage.
+
 ## The standard, --help (or --usage) and --version
 ```
-./glopi.sh --version
+python3 glopi.py --version
 ```
 Will get the current version, like `Glopi Alpha 3` (latest)
 
 ```
-./glopi.sh --help
+python3 glopi.py --help
 or
-./glopi.sh --usage
+python3 glopi.py --usage
 ```
 Will get 'help' (tell you to read this), might make proper help later on, as that is not a big priority.
