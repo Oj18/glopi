@@ -60,7 +60,7 @@ If you don't put a file name after then it will print out the output in the term
 ```
 ./glopi.sh --version
 ```
-Will get the current version, like `Glopi Alpha 2` (latest)
+Will get the current version, like `Glopi Alpha 3` (latest)
 
 ```
 ./glopi.sh --help
