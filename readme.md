@@ -2,8 +2,11 @@
 An easy interface for the api for GitKraken Glo, kinda like Trello.
 
 # Installation
-Requires python3 to be installed and the pip module `pyautogui`. It also requires you to have Firefox installed and in your path (it should be normally). You have to be already logged in Firefox already. You can run
+Requires python3 to be installed and the pip module `pyautogui`. It also requires you to have Firefox installed and in your path (it should be normally). You have to be already logged in Firefox already. You can do a quick / automated install (including download) below:
 ```
+git clone https://github.com/Oj18/glopi.git
+cd glopi
+chmod +x *
 sudo ./install.sh
 ```
 To check / install requirements, `(apt) python3, (apt) python3-pip, (pip) pyautogui`
