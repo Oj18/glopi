@@ -49,6 +49,6 @@ etc.
 ```
 It goes from the left to the right. Usage:
 ```
-./glopi.sh changelog <BOARD_ID> o[<FILE_NAME>]
+./glopi.sh changelog <BOARD_ID> [<FILE_NAME>]
 ```
 If you don't put a file name after then it will print out the output in the terminal, if you do put a file name it will save the output there and not print anything in the terminal.
