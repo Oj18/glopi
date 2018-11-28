@@ -1,10 +1,15 @@
 import json
+import sys
 
-with open('cards.json') as f:
+with open('/tmp/glopi/cards.json') as f:
     cards = json.load(f)
 
-with open('columns.json') as f:
+with open('/tmp/glopi/columns.json') as f:
     columns = json.load(f)
+
+if (len(sys.argv) > 1):
+    f = open(sys.argv[1], 'w')
+    sys.stdout = f
 
 print(columns["name"] + " Changelog:")
 
